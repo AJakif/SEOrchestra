@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  orchestrator:
+    build: ./orchestrator
+    ports:
+      - "8000:8000" # Expose the orchestrator to the host machine
+    env_file:
+      - .env
+    depends_on:
+      - audit_agent
+      - reporting_agent
+    networks:
+      - seorchestra_network
+
+  audit_agent:
+    build: ./audit_agent
+    env_file:
+      - .env
+    networks:
+      - seorchestra_network
+
+  reporting_agent:
+    build: ./reporting_agent
+    env_file:
+      - .env
+    networks:
+      - seorchestra_network
+
+# Define a network so the containers can find each other by name
+networks:
+  seorchestra_network:
+    driver: bridge

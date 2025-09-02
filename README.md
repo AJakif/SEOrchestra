@@ -94,7 +94,7 @@ seorchestra/
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/your_username/seorchestra.git
+    git clone https://github.com/AJakif/SEOrchestra.git
     cd seorchestra
     ```
 

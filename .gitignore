@@ -59,11 +59,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# Docker
-**/Dockerfile
-**/.dockerignore
-!/*/Dockerfile  # Keep the Dockerfiles in agent directories, ignore any other ones
-
 # IDE and Editor files
 .vscode/
 .idea/

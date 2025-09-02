@@ -105,15 +105,28 @@ seorchestra/
     (Edit `.env` to add any required settings in the future)
 
 3.  **Build and run the entire stack**
+    This command builds the images and starts all three services (orchestrator, audit_agent, reporting_agent) in detached mode.
     ```bash
-    docker-compose up --build
+    docker-compose up --build -d
     ```
 
-4.  **Use the API**
+4.  **Watch the logs (Optional)**
+    To see the log output from all running services:
+    ```bash
+    docker-compose logs -f
+    ```
+
+5.  **Use the API**
     The Orchestrator service will be running on `http://localhost:8000`.
     Send a POST request to the `/audit` endpoint with a JSON body:
-    ```json
-    {"url": "https://example.com"}
+    ```bash
+    curl -X POST "http://localhost:8000/audit" -H "Content-Type: application/json" -d '{"url": "https://example.com"}'
+    ```
+
+6.  **Stopping the services**
+    To stop and remove the running containers:
+    ```bash
+    docker-compose down
     ```
 
 ---

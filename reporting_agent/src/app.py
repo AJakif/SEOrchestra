@@ -11,9 +11,9 @@ class ReportRequest(BaseModel):
 
 @app.post("/generate-report")
 async def generate_report(request: ReportRequest):
-    # Placeholder implementation - will be implemented in Task 5
+    # Placeholder implementation - will be implemented soon
     return {
-        "report_content": "This is a placeholder report. Implementation coming in Task 5.",
+        "report_content": "This is a placeholder report. Implementation coming soon.",
         "format": request.format
     }
 

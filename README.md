@@ -9,12 +9,20 @@
 
 To become the most powerful and flexible open-source platform for automated SEO analysis, built on a modular agent architecture that the community can extend and improve.
 
-## ⚡️ Current Capabilities (MVP)
+## ⚡️ Current Capabilities
 
 The initial orchestra consists of two core agents working in concert:
 
-*   **Audit Agent:** A technical SEO crawler that scans websites for critical issues (broken links, missing meta tags, etc.).
-*   **Reporting Agent:** An insight generator that transforms raw audit data into a prioritized, human-readable report.
+*   **Audit Agent:** A technical SEO crawler that scans websites for critical issues (broken links, missing meta tags, title tags, H1 headings, image alt text, etc.).
+*   **Reporting Agent:** An insight generator that transforms raw audit data into reports (currently with placeholder implementation).
+*   **Orchestrator:** Coordinates the workflow between agents and provides a unified API endpoint.
+
+**Current SEO checks implemented:**
+- Title tag presence and length validation
+- Meta description presence and length validation
+- H1 heading presence and count validation
+- Image alt text validation
+- Internal link crawling and analysis
 
 ---
 
